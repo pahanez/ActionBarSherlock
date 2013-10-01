@@ -27,6 +27,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.MenuInflater;
 
 /**
  * Demonstration of displaying a context menu from a fragment.
@@ -45,7 +46,6 @@ public class FragmentContextMenuSupport extends SherlockFragmentActivity {
     }
 
     public static class ContextMenuFragment extends SherlockFragment {
-
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {

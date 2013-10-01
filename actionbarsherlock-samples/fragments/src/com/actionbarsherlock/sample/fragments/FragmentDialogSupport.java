@@ -20,6 +20,7 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -75,7 +76,7 @@ public class FragmentDialogSupport extends SherlockFragmentActivity {
         if (prev != null) {
             ft.remove(prev);
         }
-//        ft.addToBackStack(null);
+        ft.addToBackStack(null);
 
         // Create and show the dialog.
         DialogFragment newFragment = MyDialogFragment.newInstance(mStackLevel);
@@ -124,6 +125,7 @@ public class FragmentDialogSupport extends SherlockFragmentActivity {
 
             // Pick a style based on the num.
             int style = DialogFragment.STYLE_NORMAL, theme = 0;
+            Log.e("p37td8", ""+((mNum-1)%6));
             switch ((mNum-1)%6) {
                 case 1: style = DialogFragment.STYLE_NO_TITLE; break;
                 case 2: style = DialogFragment.STYLE_NO_FRAME; break;

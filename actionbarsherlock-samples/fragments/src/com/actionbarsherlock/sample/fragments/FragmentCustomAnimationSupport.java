@@ -72,8 +72,8 @@ public class FragmentCustomAnimationSupport extends SherlockFragmentActivity {
         // on to the back stack.
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.setCustomAnimations(R.anim.fragment_slide_left_enter,
-                R.anim.fragment_slide_left_exit,
-                R.anim.fragment_slide_right_enter,
+//                R.anim.fragment_slide_left_exit,
+//                R.anim.fragment_slide_right_enter,
                 R.anim.fragment_slide_right_exit);
         ft.replace(R.id.simple_fragment, newFragment);
         ft.addToBackStack(null);
