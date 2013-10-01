@@ -72,8 +72,8 @@ public class FragmentCustomAnimationSupport extends SherlockFragmentActivity {
         // on to the back stack.
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.setCustomAnimations(R.anim.fragment_slide_left_enter,
-//                R.anim.fragment_slide_left_exit,
-//                R.anim.fragment_slide_right_enter,
+                R.anim.fragment_slide_left_exit,
+                R.anim.fragment_slide_right_enter,
                 R.anim.fragment_slide_right_exit);
         ft.replace(R.id.simple_fragment, newFragment);
         ft.addToBackStack(null);
@@ -117,7 +117,7 @@ public class FragmentCustomAnimationSupport extends SherlockFragmentActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             View v = inflater.inflate(R.layout.hello_world, container, false);
-            View tv = v.findViewById(R.id.text);
+            View tv = v.findViewById(R.id.text); 
             ((TextView)tv).setText("Fragment #" + mNum);
             tv.setBackgroundDrawable(getResources().getDrawable(android.R.drawable.gallery_thumb));
             return v;
