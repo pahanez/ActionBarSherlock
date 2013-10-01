@@ -75,7 +75,7 @@ public class FragmentDialogSupport extends SherlockFragmentActivity {
         if (prev != null) {
             ft.remove(prev);
         }
-        ft.addToBackStack(null);
+//        ft.addToBackStack(null);
 
         // Create and show the dialog.
         DialogFragment newFragment = MyDialogFragment.newInstance(mStackLevel);
