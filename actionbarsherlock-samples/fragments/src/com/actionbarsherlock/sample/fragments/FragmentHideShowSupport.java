@@ -52,8 +52,8 @@ public class FragmentHideShowSupport extends SherlockFragmentActivity {
         button.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.setCustomAnimations(android.R.anim.fade_in,
-                        android.R.anim.fade_out);
+                ft.setCustomAnimations(android.R.anim.slide_in_left,
+                        android.R.anim.slide_out_right);
                 if (fragment.isHidden()) {
                     ft.show(fragment);
                     button.setText("Hide");
